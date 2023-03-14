@@ -20,5 +20,11 @@ module Study
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Rails.configuration.aws
+    config.aws = YAML.load(
+      ERB.new(IO.read("#{Rails.root}/config/storage.yml")).result,
+      aliases: true,
+    )['amazon'].symbolize_keys!
   end
 end

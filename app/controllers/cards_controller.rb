@@ -30,6 +30,6 @@ class CardsController < ApplicationController
 
   private
     def card_params
-      params.require(:card).permit(:header, :lines, :blank, :search_cards)
+      params.require(:card).permit(:header, :lines, :blank, :study_file, :search_cards)
     end
 end

@@ -13,6 +13,12 @@
     <%= form.text_area :blank, placeholder: "text for the blank side of a card" %>
   </p>
   <p>
+    <%= form.label :study_file %>
+  </p>
+  <p>
+    <%= form.file_field :study_file %>
+  </p>
+  <p>
     <%= form.submit %>
   </p>
 <% end %>
